@@ -28,6 +28,7 @@ setup(
     install_requires=[],
     extras_require={
         'dev': [
+            'black==19.10b0',
             'mypy==0.770',
             'pytest==5.4.3',
             'typing==3.7.4.1'
