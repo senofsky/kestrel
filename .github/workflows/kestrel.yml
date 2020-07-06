@@ -1,0 +1,23 @@
+name: kestrel
+
+on: [push, pull_request]
+
+jobs:
+  Check:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install -e '.[dev]'
+    - name: Check Format
+      run: |
+        make check-format
+    - name: Check Types
+      run: |
+        make check-types
