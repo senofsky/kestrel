@@ -1,2 +1,2 @@
 # kestrel
-A library for detecting litter in a video stream
+A library for detecting trash in images and video streams
