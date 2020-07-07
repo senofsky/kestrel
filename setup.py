@@ -23,7 +23,8 @@ setup(
     license='LICENSE',
     url='https://github.com/senofsky/kestrel',
     description='A tool for detecting trash in images and videos',
-    long_description_content_type='test/markdown',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     packages=find_packages('.', exclude=['test']),
     install_requires=[],
     extras_require={
